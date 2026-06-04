@@ -28,6 +28,22 @@ Clean and prepare raw data for analysis.
 ### Outcome
 The dataset was transformed into a clean and analysis-ready format suitable for business reporting and decision-making.
 
+## Skills Demonstrated
+
+- Data Cleaning
+- Data Validation
+- Data Preparation
+- Exploratory Data Analysis (EDA)
+- Microsoft Excel
+- Power Query
+- Statistical Analysis
+
+## Dataset
+
+The dataset used in this project was provided as part of the DecodeLabs Data Analytics Internship program.
+
+Project Status: Completed ✅
+  
 ## Author
 **Ogunniyi Samson**
-Aspiring Data Analyst
+Aspiring Data Analyst | Excel | SQL | Power BI
