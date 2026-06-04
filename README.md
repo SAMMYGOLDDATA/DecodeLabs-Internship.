@@ -43,6 +43,9 @@ The dataset was transformed into a clean and analysis-ready format suitable for 
 The dataset used in this project was provided as part of the DecodeLabs Data Analytics Internship program.
 
 Project Status: Completed ✅
+
+## Project File
+- https://github.com/SAMMYGOLDDATA/DecodeLabs-Internship./blob/d3d86678829aa350db134e06e5aa77a54ce265e4/DCLAB%20TSK%201.xlsx
   
 ## Author
 **Ogunniyi Samson**
