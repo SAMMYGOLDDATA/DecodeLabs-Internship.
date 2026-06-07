@@ -1,83 +1,60 @@
-# Project 3: SQL Data Analysis - DCLAB Orders
+# DCLAB Task 3 – SQL Sales Data Analysis
 
-Analyzed the `dclab.csv` orders dataset using SQL Server to extract business insights.  
-Covers all SQL fundamentals required: SELECT, WHERE, ORDER BY, GROUP BY, COUNT, SUM, AVG.
+## Project Overview
+This project focuses on analyzing sales transaction data using SQL to generate business insights. Various SQL queries were written to answer key business questions related to sales performance, revenue generation, payment methods, product performance, and order cancellations.
 
-## Dataset
-**File:** `dclab.csv`  
-**Table:** `dbo.dclab`  
-**Columns:** `OrderID, Date, CustomerID, Product, Quantity, Unit_Price, Shipping_Address, Payment_Method, Order_Status, Tracking_Number, Items`
+## Objectives
+The goal of this analysis is to:
 
-## Project Requirements Met
-| Requirement | SQL Clause |
-| --- | --- |
-| Extract data | SELECT |
-| Filter rows | WHERE |
-| Sort results | ORDER BY |
-| Group + summarize | GROUP BY |
-| Basic aggregations | COUNT, SUM, AVG |
+- Identify revenue-generating products.
+- Analyze customer payment preferences.
+- Determine best-selling products and months.
+- Evaluate cancellation rates across payment methods.
+- Extract actionable business insights from sales data.
 
-## Key Insights + Queries
+## Tools Used
+- SQL Server
+- Microsoft Excel
+- GitHub
 
-### 1. Filter Shipped Credit Card Orders
-```sql
-SELECT OrderID, Date, Product, Quantity, Unit_Price
-FROM dclab
-WHERE Order_Status = 'Shipped' AND Payment_Method = 'Credit Card'
+## Analysis Performed
 
-### 2. TOP 10 MOST EXPENSIVE ORDER
-SELECT OrderID, Product, Quantity, Unit_Price, 
-       Quantity * Unit_Price AS TotalPrice
-FROM dclab
-ORDER BY TotalPrice DESC
-OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY
+### 1. Orders Paid by Credit Card
+Retrieved all orders completed using the Credit Card payment method.
 
-### 3. Orders Count per Product 
-SELECT Product, COUNT(*) AS OrderCount
-FROM dclab
-GROUP BY Product
-ORDER BY OrderCount DESC
+### 2. Most Expensive Orders
+Identified the top orders with the highest total transaction value.
 
-### 4. Average Unit Price per Product
-SELECT Product, AVG(Unit_Price) AS AvgPrice
-FROM dclab
-GROUP BY Product
-ORDER BY AvgPrice DESC
+### 3. Orders per Product
+Calculated the number of orders placed for each product category.
 
-### 5. Total Quantity Sold by Payment Method
-SELECT Payment_Method, SUM(Quantity) AS TotalQuantity
-FROM dclab
-GROUP BY Payment_Method
+### 4. Quantity per Payment Method
+Analyzed total quantities purchased through different payment methods.
 
-### 6. Revenue by Product - Completed Orders Only
-SELECT Product, 
-       COUNT(*) AS Orders,
-       SUM(Quantity * Unit_Price) AS TotalRevenue,
-       AVG(Unit_Price) AS AvgUnitPrice
-FROM dclab
-WHERE Order_Status IN ('Shipped', 'Delivered')
-GROUP BY Product
-ORDER BY TotalRevenue DESC
+### 5. Average Unit Price per Product
+Computed the average selling price of each product.
 
-### 7. Best Selling Month
-SELECT 
-    FORMAT(Date, 'yyyy-MM') AS OrderMonth,
-    COUNT(*) AS TotalOrders,
-    SUM(Quantity * Unit_Price) AS MonthlyRevenue
-FROM dclab
-WHERE Order_Status IN ('Shipped', 'Delivered')
-GROUP BY FORMAT(Date, 'yyyy-MM')
-ORDER BY MonthlyRevenue DESC
+### 6. Revenue by Product
+Generated revenue metrics for each product including:
+- Number of Orders
+- Total Revenue
+- Average Unit Price
 
-### 8. Cancel Rate by Payment Method
-SELECT 
-    Payment_Method,
-    COUNT(*) AS TotalOrders,
-    SUM(CASE WHEN Order_Status = 'Cancelled' THEN 1 ELSE 0 END) AS CancelledOrders,
-    ROUND(100.0 * SUM(CASE WHEN Order_Status = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(*), 2) AS CancelRatePercent
-FROM dclab
-GROUP BY Payment_Method
-ORDER BY CancelRatePercent DESC
+### 7. Best Selling Months
+Identified months with the highest sales volume and revenue.
+
+### 8. Cancellation Rate Analysis
+Calculated cancellation percentages across payment methods to understand transaction risks.
+
+## Key Insights
+
+- Printers generated the highest revenue among all products.
+- Tablets and Printers recorded some of the highest order counts.
+- Online payments processed the largest quantity of products.
+- October 2023 was the best-performing month in terms of revenue.
+- Credit Card transactions recorded the highest cancellation rate.
+
+## Project Structure
 
 
 ## Sample Business Questions Answered
