@@ -80,6 +80,11 @@ Calculated cancellation percentages across payment methods to understand transac
 
 This SQL project demonstrates the use of data querying, aggregation functions, filtering, grouping, sorting, and business analysis techniques to transform raw sales data into meaningful insights that support decision-making.
 
+## Dataset
+
+Access the dataset here:
+DCLAB TSK 3.xlsx
+
 ---
 **Author:** Ogunniyi Samson O 
 **Role:** Data Analyst Intern
