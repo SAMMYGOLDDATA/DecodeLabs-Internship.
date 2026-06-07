@@ -83,7 +83,7 @@ This SQL project demonstrates the use of data querying, aggregation functions, f
 ## Dataset
 
 Access the dataset here:
-DCLAB TSK 3.xlsx
+
 
 ---
 **Author:** Ogunniyi Samson O 
