@@ -78,3 +78,31 @@ SELECT
 FROM dclab
 GROUP BY Payment_Method
 ORDER BY CancelRatePercent DESC
+
+
+## Sample Business Questions Answered
+
+1. Which products generate the highest revenue?
+2. What payment method is used most frequently?
+3. Which month recorded the highest sales?
+4. What is the cancellation rate for each payment method?
+5. Which orders had the highest transaction values?
+
+## Skills Demonstrated
+
+- SQL Queries
+- Data Aggregation
+- Data Analysis
+- Business Intelligence
+- Data Cleaning
+- Group By & Order By
+- Joins and Filtering
+- Reporting & Insights Generation
+
+## Conclusion
+
+This SQL project demonstrates the use of data querying, aggregation functions, filtering, grouping, sorting, and business analysis techniques to transform raw sales data into meaningful insights that support decision-making.
+
+---
+**Author:** Ogunniyi Samson O 
+**Role:** Data Analyst Intern
