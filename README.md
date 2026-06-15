@@ -117,7 +117,7 @@ The dataset used in this project was provided as part of the DecodeLabs Data Ana
 Project Status: Completed ✅
 
 ## Project File
-- https://github.com/SAMMYGOLDDATA/DecodeLabs-Internship./blob/d3d86678829aa350db134e06e5aa77a54ce265e4/DCLAB%20TSK%201.xlsx
+- [https://github.com/SAMMYGOLDDATA/DecodeLabs-Internship./blob/d3d86678829aa350db134e06e5aa77a54ce265e4/DCLAB%20TSK%201.xlsx](https://github.com/SAMMYGOLDDATA/DecodeLabs-Internship./blob/main/DCLAB%20TSK.xlsx)
   
 ## Author
 **Ogunniyi Samson**
